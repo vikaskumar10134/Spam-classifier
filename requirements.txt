@@ -1,0 +1,17 @@
+joblib==1.5.1
+MarkupSafe==3.0.2
+matplotlib==3.10.5
+matplotlib-inline==0.1.7
+nltk==3.9.1
+numpy==2.3.2
+packaging==25.0
+pandas==2.3.1
+parso==0.8.5
+pillow==11.3.0
+regex==2025.9.1
+scikit-learn==1.7.1
+scipy==1.16.1
+seaborn==0.13.2
+streamlit==1.49.1
+wcwidth==0.2.13
+wordcloud==1.9.4
