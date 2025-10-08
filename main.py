@@ -5,8 +5,17 @@ from nltk import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 
+import nltk 
+
+nltk.download('punkt_tab')
+nltk.download('stopwords')
+
+# ["running", "runs", "runner" --> run]
+
 pr = PorterStemmer()
 
+
+# function to transform text
 def transform_text(text : str):
 
 
@@ -50,13 +59,20 @@ def transform_text(text : str):
 
     return ' '.join(list1)
 
+# load the model and vectorizer
+
 model = pickle.load(open('model.pkl' , 'rb'))
 tfidf = pickle.load(open('vectorizer.pkl' , 'rb'))
 
+# Add the title
 st.title('Email/SMS spam classifier')
 
+
+# take input form the user
 input_text = st.text_area('Enter the message ')
 
+
+# add the predict button
 if st.button('Predict'):
 
     # 1. preprocess
@@ -77,4 +93,5 @@ if st.button('Predict'):
         st.header('Spam')
 
     else:
+
         st.header('Not spam')
